@@ -62,7 +62,7 @@ const Tenant = () => {
           />
           <Footer
             rightButtonLabel="GET STARTED"
-            rightButtonPress={() => alert('hi')}
+            rightButtonPress={() => alert('Tenant')}
             boldCount={[0, 1, 2, 3]}
             lightCount={[]}
           />

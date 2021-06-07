@@ -88,7 +88,7 @@ const PropertyManager = () => {
             />
             <Footer
               rightButtonLabel="GET STARTED"
-              rightButtonPress={() => alert('hi')}
+              rightButtonPress={() => alert('Property Manager')}
               boldCount={[0, 1, 2, 3, 4, 5]}
               lightCount={[]}
             />
