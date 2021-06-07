@@ -43,7 +43,15 @@ const Footer = ({
             );
           })}
         </View>
-        <RoundedButton label={rightButtonLabel} onPress={rightButtonPress} />
+
+        <RoundedButton
+          label={
+            lightCount.length == 1 || lightCount.length == 0
+              ? 'GET STARTED'
+              : rightButtonLabel
+          }
+          onPress={rightButtonPress}
+        />
       </View>
     </View>
   );
