@@ -6,10 +6,19 @@ export const styles = StyleSheet.create({
     height: 190,
     resizeMode: 'stretch',
   },
+  mainContainer: {flex: 1, backgroundColor: THEME.BLACK},
+  backView: {
+    backgroundColor: THEME.RED,
+    height: '80%',
+    borderBottomLeftRadius: 45,
+    overflow: 'hidden',
+  },
   logo: {
     width: 109,
     height: 69.16,
   },
+  pageView: {flex: 1, backgroundColor: THEME.BLACK},
+  viewFooter: {borderBottomLeftRadius: 45},
   logoView: {
     position: 'absolute',
     paddingTop: 50,

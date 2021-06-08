@@ -1,6 +1,14 @@
 import {StyleSheet} from 'react-native';
 import THEME from '../../../constants/colors';
 export const styles = StyleSheet.create({
+  mainContainer: {flex: 1, backgroundColor: THEME.BLACK},
+  backContainer: {
+    height: '80%',
+    borderBottomLeftRadius: 45,
+    overflow: 'hidden',
+  },
+  pageView: {flex: 1, backgroundColor: THEME.BLACK},
+  viewFooter: {borderBottomLeftRadius: 45, backgroundColor: THEME.RED},
   header: {
     width: '100%',
     height: 190,

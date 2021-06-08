@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, useWindowDimensions, Image} from 'react-native';
+import {View, useWindowDimensions, Image, Dimensions} from 'react-native';
 import {IMAGE} from '../../assets/images';
 import RoundedButton from '../RoundedButtons/index';
 import {styles} from './styles';
@@ -10,8 +10,7 @@ const Footer = ({
   lightCount,
 }) => {
   const windowWidth = useWindowDimensions().width;
-  const HEIGHT = windowWidth * 0.21;
-  const FOOTER_PADDING = windowWidth * 0.1;
+  const HEIGHT = useWindowDimensions().height * 0.2;
 
   return (
     <View>
@@ -20,38 +19,34 @@ const Footer = ({
           flexDirection: 'row',
           justifyContent: 'space-between',
           height: HEIGHT,
-          paddingHorizontal: FOOTER_PADDING,
+          backgroundColor: 'white',
         }}>
-        <Image style={styles.footer} source={IMAGE.FOOTER} />
         <View
           style={{
-            fle: 1,
-            width: '70%',
-            flexDirection: 'row',
-            justifyContent: 'space-evenly',
-            left: 55,
-            alignSelf: 'center',
+            backgroundColor: 'black',
+            width: Dimensions.get('screen').width,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderTopRightRadius: 45,
           }}>
-          {boldCount?.map(value => {
-            return (
-              <View style={{height: 5, width: 20, backgroundColor: 'white'}} />
-            );
-          })}
-          {lightCount?.map(value => {
-            return (
-              <View style={{height: 5, width: 20, backgroundColor: 'grey'}} />
-            );
-          })}
-        </View>
+          <View style={styles.statusView}>
+            {boldCount?.map(value => {
+              return <View style={styles.boldView} />;
+            })}
+            {lightCount?.map(value => {
+              return <View style={styles.lightView} />;
+            })}
+          </View>
 
-        <RoundedButton
-          label={
-            lightCount.length == 1 || lightCount.length == 0
-              ? 'GET STARTED'
-              : rightButtonLabel
-          }
-          onPress={rightButtonPress}
-        />
+          <RoundedButton
+            label={
+              lightCount.length == 1 || lightCount.length == 0
+                ? 'GET STARTED'
+                : rightButtonLabel
+            }
+            onPress={rightButtonPress}
+          />
+        </View>
       </View>
     </View>
   );

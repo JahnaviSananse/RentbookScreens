@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import PagerView from 'react-native-pager-view';
 import {IMAGE} from '../../../assets/images';
 import Footer from '../../../components/Footer/index';
+import {styles} from './styles';
 import Page from '../../../components/Pages/pages';
 
 const Tenant = () => {
@@ -14,62 +15,44 @@ const Tenant = () => {
     pagerRef.current.setPage(pageNumber);
   };
   return (
-    <View style={{flex: 1}}>
-      <PagerView style={{flex: 1}} initialPage={0} ref={pagerRef}>
-        <View key="1">
-          <Page
-            title="CONNECT BANK ACCOUNT"
-            secondaryText="Connect your bank account under ‘Settings’ to enable payment agreements between you and your landlord."
-            image={IMAGE.MOBILE1}
-          />
-          {/* <Footer
-            rightButtonLabel="Next"
-            rightButtonPress={() => pageHandle(1)}
-            boldCount={[0]}
-            lightCount={[0, 1, 2]}
-          /> */}
-        </View>
-        <View key="2">
-          <Page
-            title="ACCEPTING LEASE AGREEMENT"
-            secondaryText="Once your landlord sends you the details, you will have a chance to approve the payment agreement under the Properties tab."
-            image={IMAGE.MOBILE1}
-          />
-          {/* <Footer
-            rightButtonLabel="Next"
-            rightButtonPress={() => pageHandle(2)}
-            boldCount={[0, 1]}
-            lightCount={[0, 1]}
-          /> */}
-        </View>
-        <View key="3">
-          <Page
-            title="TRACK PAYMENTS"
-            secondaryText="All of your transactions between you
+    <View style={styles.mainContainer}>
+      <View style={styles.backView}>
+        <PagerView
+          initialPage={0}
+          scrollEnabled={false}
+          ref={pagerRef}
+          style={styles.pageView}>
+          <View key="1" style={styles.viewFooter}>
+            <Page
+              title="CONNECT BANK ACCOUNT"
+              secondaryText="Connect your bank account under ‘Settings’ to enable payment agreements between you and your landlord."
+              image={IMAGE.MOBILE1}
+            />
+          </View>
+          <View key="2">
+            <Page
+              title="ACCEPTING LEASE AGREEMENT"
+              secondaryText="Once your landlord sends you the details, you will have a chance to approve the payment agreement under the Properties tab."
+              image={IMAGE.MOBILE1}
+            />
+          </View>
+          <View key="3">
+            <Page
+              title="TRACK PAYMENTS"
+              secondaryText="All of your transactions between you
             and your landlord are recorded here under Payments."
-            image={IMAGE.MOBILE1}
-          />
-          {/* <Footer
-            rightButtonLabel="GET STARTED"
-            rightButtonPress={() => pageHandle(3)}
-            boldCount={[0, 1, 2]}
-            lightCount={[0]}
-          /> */}
-        </View>
-        <View key="4">
-          <Page
-            title="TRACK MAINTENANCE TASKS"
-            secondaryText="See the tasks that are currently happening in your home under the Tasks tab."
-            image={IMAGE.MOBILE1}
-          />
-          {/* <Footer
-            rightButtonLabel="GET STARTED"
-            rightButtonPress={() => alert('Tenant')}
-            boldCount={[0, 1, 2, 3]}
-            lightCount={[]}
-          /> */}
-        </View>
-      </PagerView>
+              image={IMAGE.MOBILE1}
+            />
+          </View>
+          <View key="4">
+            <Page
+              title="TRACK MAINTENANCE TASKS"
+              secondaryText="See the tasks that are currently happening in your home under the Tasks tab."
+              image={IMAGE.MOBILE1}
+            />
+          </View>
+        </PagerView>
+      </View>
       <Footer
         rightButtonLabel="NEXT"
         rightButtonPress={() => {

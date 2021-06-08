@@ -8,4 +8,12 @@ export const styles = StyleSheet.create({
     resizeMode: 'stretch',
     borderTopRightRadius: 10,
   },
+  statusView: {
+    width: '50%',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignSelf: 'center',
+  },
+  boldView: {height: 5, width: 20, backgroundColor: THEME.WHITE},
+  lightView: {height: 5, width: 20, backgroundColor: THEME.GREY},
 });

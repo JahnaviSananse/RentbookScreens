@@ -4,21 +4,12 @@ import {IMAGE} from '../../assets/images';
 import * as string from '../../constants/constant';
 import {styles} from './styles';
 import Button from '../../components/Button/index';
-import {useNavigation} from '@react-navigation/native';
 const SelectionScreen = ({navigation}) => {
-  // const navigation = useNavigation();
   return (
     <SafeAreaView>
-      <View style={{backgroundColor: 'black'}}>
-        <View style={{backgroundColor: 'white'}}>
-          <View
-            style={{
-              backgroundColor: 'black',
-              height: 200,
-              width: '100%',
-              borderBottomLeftRadius: 40,
-            }}></View>
-          {/* <Image style={styles.header} source={IMAGE.HEADER} /> */}
+      <View style={styles.backHeader}>
+        <View style={styles.pageView}>
+          <View style={styles.viewHead}></View>
 
           <View style={styles.logoView}>
             <Image style={styles.logo} source={IMAGE.RENTBOOK_LOGO} />

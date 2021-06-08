@@ -7,10 +7,18 @@ export const styles = StyleSheet.create({
     resizeMode: 'stretch',
     borderBottomLeftRadius: 11,
   },
+  backHeader: {backgroundColor: THEME.BLACK},
+  pageView: {backgroundColor: THEME.WHITE},
+  viewHead: {
+    backgroundColor: THEME.BLACK,
+    height: 200,
+    width: '100%',
+    borderBottomLeftRadius: 40,
+  },
   compView: {
     borderTopRightRadius: 40,
     overflow: 'hidden',
-    backgroundColor: 'white',
+    backgroundColor: THEME.WHITE,
   },
   logo: {
     width: 109,
