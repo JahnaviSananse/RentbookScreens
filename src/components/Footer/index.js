@@ -39,11 +39,7 @@ const Footer = ({
           </View>
 
           <RoundedButton
-            label={
-              lightCount.length == 1 || lightCount.length == 0
-                ? 'GET STARTED'
-                : rightButtonLabel
-            }
+            label={lightCount.length == 0 ? 'GET STARTED' : rightButtonLabel}
             onPress={rightButtonPress}
           />
         </View>
